@@ -95,3 +95,27 @@ const obj4 = { lang1 : "JAVASCRIPT" , lang2 : "JAVA" , lang3 : "PYTHON" , lang4 
 const {lang1, ...langs} = obj4;
 console.log(lang1)
 console.log(langs) //print the remaining elements after lang1
+
+
+//using "this" for object refence ,The this refers to the object that it is in
+
+const manager = {
+    name : "Manager",
+    field : "Web Developer",
+    experience : "10 years"
+}
+const intern = {
+    name : "Itern",
+    field : "Web Developer",
+    experience : "0 years"
+}
+
+function greeting() {
+    return (`Welcome ${this.name}`);
+}
+
+manager.greeting = greeting;
+intern.greeting = greeting;
+
+console.log(manager.greeting());
+console.log(intern.greeting());
