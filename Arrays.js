@@ -16,9 +16,11 @@ for (const value of array) {
 }
 
 //iterating over arrays using foreach loop
-array.forEach(element => {
+let a = array.forEach(element => {
     console.log(element)
 });
+
+console.log(a);
 
 //using while loop
 let i = 0;
@@ -68,7 +70,7 @@ const filtering = numberArray.filter(item => {
 
 //reduce function
 const reduce = numberArray.reduce((acc, item) => {
-    return acc * item;//add all the elements in the array and return a single value as the sum of elements 
+    return acc + item;//add all the elements in the array and return a single value as the sum of elements 
 },0)
 
 //every function
